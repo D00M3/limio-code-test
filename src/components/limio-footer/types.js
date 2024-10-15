@@ -4,6 +4,7 @@ type ContactField = {
   label: string,
   url: string,
   value: string
+  id: string
 }
 
 type NavigationItem = {

@@ -6,7 +6,7 @@ const ContactFields = ({ contactFields }: ContactFieldsProps) => (
   <>
     {contactFields.map((contactField, index) =>
       contactField.url ? (
-        <div className="ContactLabel">{contactField.label}
+        <div className="ContactLabel" key={"contactField" + index}>{contactField.label}
         <p key={"contactField" + index} className={"ContactField"}>
           <a className="FooterLink" href={contactField.url} target="_top">
             {contactField.value}
@@ -14,8 +14,8 @@ const ContactFields = ({ contactFields }: ContactFieldsProps) => (
         </p>
         </div>
       ) : (
-        <div className="ContactLabel">{contactField.label}
-        <p className={"ContactField"} key={"contactField" + index}>
+        <div className="ContactId" key={"contactField" + index}>{contactField.id}
+        <p className={"ContactField"}>
           {contactField.value}
         </p>
         </div>
