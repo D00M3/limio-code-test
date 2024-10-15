@@ -30,6 +30,7 @@
     "camelcase": "^6.2.1",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "cookie": "^0.4.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.2.0",
     "dotenv": "^10.0.0",
@@ -81,10 +82,10 @@
     "xss": "^1.0.15"
   },
   "scripts": {
-    "start": "PORT=8100 node scripts/start.js",
-    "start:dev": "PORT=8100 node scripts/start.js",
-    "start:which": "PORT=8100 node scripts/start.js --which",
-    "start:econ": "PORT=8100 node scripts/start.js --economist",
+    "start": "cross-env PORT=8100 node scripts/start.js",
+    "start:dev": "cross-env PORT=8100 node scripts/start.js",
+    "start:which": "cross-env PORT=8100 node scripts/start.js --which",
+    "start:econ": "cross-env PORT=8100 node scripts/start.js --economist",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
